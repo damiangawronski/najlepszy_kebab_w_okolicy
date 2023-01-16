@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "527314855229",
+    "project_id": "kebab-w-okolicy",
+    "storage_bucket": "kebab-w-okolicy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527314855229:android:5b87d69dccd4b6470c1154",
+        "android_client_info": {
+          "package_name": "com.damiangawronski.najlepszy_kebab_w_okolicy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527314855229-35u67tq1nhkncvum6i0kdt332i0usp70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXUjDLgT7Z8PZQhhotagZnXP3NA2dxeDs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527314855229-35u67tq1nhkncvum6i0kdt332i0usp70.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
