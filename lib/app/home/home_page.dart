@@ -1,5 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:najlepszy_kebab_w_okolicy/app/home/add_opinion/add_opinion_page_content.dart';
+import 'package:najlepszy_kebab_w_okolicy/app/home/my_account/my_account_page_content.dart';
+import 'package:najlepszy_kebab_w_okolicy/app/home/places/places_page_content.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -18,35 +21,18 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    if (currentIndex == 0) {
-      return Center(
-        child: Text('jeden'),
-      );
-    }
-    if (currentIndex == 1) {
-      return Center(
-        child: Text('dwa'),
-      );
-    }
-
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('najlepszy kebab w okolicy'),
+      ),
       body: Builder(builder: (context) {
-        return Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('jestes zalogowany jako ${widget.user.email}'),
-              const SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                  onPressed: () {
-                    FirebaseAuth.instance.signOut();
-                  },
-                  child: const Text('wyloguj'))
-            ],
-          ),
-        );
+        if (currentIndex == 0) {
+          return const PlacesPageContent();
+        }
+        if (currentIndex == 1) {
+          return const AddOpinionPageContent();
+        }
+        return MyAccountPageContent(email: widget.user.email);
       }),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
