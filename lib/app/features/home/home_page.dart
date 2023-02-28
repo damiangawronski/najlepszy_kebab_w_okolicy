@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:najlepszy_kebab_w_okolicy/app/home/add_opinion/add_opinion_page_content.dart';
-import 'package:najlepszy_kebab_w_okolicy/app/home/my_account/my_account_page_content.dart';
-import 'package:najlepszy_kebab_w_okolicy/app/home/places/places_page_content.dart';
+import 'package:najlepszy_kebab_w_okolicy/app/features/home/add_opinion/add_opinion_page_content.dart';
+import 'package:najlepszy_kebab_w_okolicy/app/features/home/my_account/my_account_page_content.dart';
+import 'package:najlepszy_kebab_w_okolicy/app/features/home/places/places_page_content.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
           return const PlacesPageContent();
         }
         if (currentIndex == 1) {
-          return  AddOpinionPageContent(onSave: () {
+          return AddOpinionPageContent(onSave: () {
             setState(() {
               currentIndex = 0;
             });
